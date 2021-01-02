@@ -55,6 +55,10 @@ header nav li {
   margin-right: 1rem;
 }
 
+header nav li a:hover {
+  opacity: 0.8;
+}
+
 /*
 ===========
  Container
@@ -115,7 +119,7 @@ main {
 
 footer nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 2rem;
 }
 
