@@ -149,3 +149,33 @@ nav li a:hover {
 footer nav {
   padding-bottom: 2rem;
 }
+
+@media screen and (max-width: 900px) {
+  nav {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  footer nav {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+}
