@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+:root {
+  --font-color: #95e0cc;
+  --background-color: #1c2638;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set 1rem = 10px */
+  font-size: 62.5%;
+  font-family: "Press Start 2P", sans-serif;
+  background: var(--background-color);
+  color: var(--font-color);
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/*
+=========
+ Nav bar
+=========
+*/
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f2f2;
+  height: 3rem;
+  display: grid;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav li {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+header nav li a:hover {
+  opacity: 0.8;
+}
+
+/*
+=========
+ Main
+=========
+*/
+
+main {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main .hero h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+main .hero > p {
+  width: 60%;
+  font-size: 1rem;
+  padding: 0 2.5rem 2rem 2.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+main .answer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 8rem;
+  width: 12rem;
+  background: var(--background-color);
+  border: 5px solid #39707a;
+  margin: 0 auto;
+}
+
+main .player-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 2rem;
+  padding: 3rem 1.5rem;
+}
+
+main .player-info .guess-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+}
+
+main .player-info .guess-section p {
+  padding-bottom: 1.5rem;
+}
+
+main .player-info .guess-section .guess-box {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 3rem;
+  height: 7rem;
+  width: 11rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--font-color);
+  background: var(--background-color);
+  border: 5px solid #39707a;
+}
+
+main .player-info .guess-section .guess-box::-webkit-outer-spin-button,
+main .player-info .guess-section .guess-box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main .player-info .guess-section .guess-box[type="number"] {
+  -moz-appearance: textfield;
+}
+
+main .player-info button {
+  font-family: "Press Start 2P", sans-serif;
+  background: var(--background-color);
+  color: var(--font-color);
+  padding: 0.8rem;
+  margin: 0 auto;
+}
+
+main .player-info button:hover {
+  cursor: pointer;
+}
+
+main .player-info .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 3rem;
+}
+
+main .player-info .stats p {
+  padding-bottom: 1rem;
+}
+
+main .player-info .stats button {
+  margin-top: 3rem;
+}
+
+/*
+=========
+ Footer
+=========
+*/
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 2rem;
+}
+
+footer nav .footer-left,
+footer nav .footer-right {
+  display: flex;
+}
+
+footer nav li {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+footer nav li a:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 800px) {
+  main .hero h1 {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  main .hero > p {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+
+  main .player-info {
+    flex-wrap: wrap;
+  }
+
+  main .player-info .guess-section button {
+    margin-bottom: 2rem;
+  }
+
+  main .player-info .stats button {
+    margin-top: 1rem;
+  }
+}

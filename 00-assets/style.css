@@ -97,6 +97,7 @@ main .project-item img {
 }
 
 main .project-item figcaption {
+  min-height: 7rem;
   background: #f2f2f2;
   color: #020024;
   padding: 1rem;

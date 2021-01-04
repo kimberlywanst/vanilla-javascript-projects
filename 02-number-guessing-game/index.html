@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Guess The Number! 🎲</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">Guess The Number! 🎲</a></li>
+          <li>
+            <a href="/">Back to Main ➡️</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <h1>Guess The Number!</h1>
+        <p>
+          Test your skillz by guessing the correct number between 1 and 30.
+          Choose wisely, you only have 5 lives!
+        </p>
+        <div class="answer-box">?</div>
+        <div class="player-info">
+          <div class="guess-section">
+            <p class="message">Start guessing...</p>
+            <input class="guess-box" type="number" autofocus />
+            <button id="check-button">Check!</button>
+          </div>
+          <div class="stats">
+            <p>💓 Lives: <span id="lives">5</span></p>
+            <p>🏆 Rounds won: <span id="rounds">0</span></p>
+            <button id="replay-button">Replay!</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <nav>
+        <ul class="footer-left">
+          <li>
+            Made with <span role="img" aria-label="heart">❤️</span> by Kimberly
+            <span role="img" aria-label="sparkles">✨</span>
+          </li>
+        </ul>
+        <ul class="footer-right">
+          <li>
+            <a href="https://twitter.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-twitter" aria-hidden="true"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-github" aria-hidden="true"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
