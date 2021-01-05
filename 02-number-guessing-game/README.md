@@ -6,7 +6,7 @@ Guess the correct number between 1 and 30. You only have 5 guesses before it's g
 
 ![](../00-assets/images/projects/markdown/02-number-guessing-game.jpg)
 
-[Live demo](https://vanillajs-only.netlify.app/02-number-guessing-game)
+[👉🏻 View live demo](https://vanillajs-only.netlify.app/02-number-guessing-game)
 
 ## Logic
 
