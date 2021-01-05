@@ -4,7 +4,7 @@ A collection of projects that I've built using HTML, CSS and plain JavaScript.
 
 View all live demos [here](https://vanillajs-only.netlify.app/).
 
-## 1. [Background Colour Picker 🎨](https://vanilla-javascript-projects.netlify.app/01-background-colour-picker/)
+## 1. [Background Colour Picker 🎨](https://vanillajs-only.netlify.app/01-background-colour-picker)
 
    A website that displays a random background colour each time "Change colour" button is clicked.
 
