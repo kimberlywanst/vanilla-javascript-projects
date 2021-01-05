@@ -2,7 +2,7 @@
 
 A collection of projects that I've built using HTML, CSS and plain JavaScript.
 
-👉🏻 [View all live demos](https://vanillajs-only.netlify.app/).
+👉🏻 [View all live demos](https://vanillajs-only.netlify.app/)
 
 ## 1. [Background Colour Picker 🎨](https://vanillajs-only.netlify.app/01-background-colour-picker)
 
