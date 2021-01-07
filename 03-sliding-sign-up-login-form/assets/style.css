@@ -1,0 +1,365 @@
+:root {
+  --font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --dark-font-color: #003049;
+  --light-font-color: #eae2b7;
+  --login-overlay: #d62828;
+  --signup-overlay: #f77f00;
+  --background-color: #f6f5f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set 1rem = 10px */
+  font-size: 62.5%;
+  font-family: var(--font);
+  background: var(--background-color);
+  color: var(--font-color);
+  line-height: 1.5;
+  height: 100vh;
+  padding: 0 2rem;
+  margin: 0 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.05rem;
+}
+
+p {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+button {
+  font: var(--font);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background: var(--login-overlay);
+  border: 1px solid #d62828;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  transition: transform 80ms ease-in;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+/*
+=========
+ Main
+=========
+*/
+
+main {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 2.5rem 0;
+}
+
+main .container {
+  position: relative;
+  width: 77rem;
+  max-width: 100%;
+  min-height: 40rem;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+main .form-container {
+  position: absolute;
+  top: 0;
+  /* push login & signup containers to top */
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  /* smooth transform translate X transitions */
+}
+
+main .login-container {
+  left: 0;
+  z-index: 2;
+}
+
+main .signup-container {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+main .form-container form,
+main .form-container form .input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+main .form-container form {
+  padding: 0 2rem;
+}
+
+main .form-container form .social-container {
+  margin: 1.5rem 0;
+}
+
+main .form-container form .social-container a {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+main .form-container form p {
+  margin-bottom: 1rem;
+}
+
+main .form-container form input {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+main .overlay-container button.transparent {
+  background: transparent;
+  border-color: #fff;
+}
+
+.overlay-left h2,
+.overlay-right h2 {
+  padding-bottom: 1.5rem;
+}
+
+/*
+=========
+ Nav bar
+=========
+*/
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  height: 3rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav li {
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+nav li a:hover {
+  opacity: 0.8;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav .about,
+footer nav .social {
+  display: flex;
+  padding-bottom: 0.8rem;
+}
+
+/*
+=========
+ Media
+=========
+*/
+
+@media screen and (min-width: 1100px) {
+  main .container {
+    width: 77rem;
+    max-width: 100%;
+    min-height: 40rem;
+  }
+
+  main .login-container,
+  main .signup-container {
+    width: 50%;
+  }
+
+  /* Display visible area by hiding panel which is overflow/ out of boundary */
+  main .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+
+  /* Hide and show panels */
+  main .overlay-container .overlay {
+    position: relative;
+    height: 100%;
+    width: 200%;
+    /* take full width of overlay-container: 200% * 50% = 100% */
+    /* left: 100%; */
+
+    background: var(--login-overlay);
+    background: linear-gradient(to right, #f77f00, #d62828);
+    /* background: linear-gradient(to right, #d62828, #f77f00); */
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  /* Holds actual content */
+  main .overlay-container .overlay .overlay-panel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  /* hides content from view */
+  .overlay-right {
+    /* right: 0; */
+    transform: translateX(0);
+  }
+
+  .overlay-left {
+    transform: translateX(-20%);
+    right: 0;
+  }
+
+  /*
+===================
+ SLIDING ANIMATION
+===================
+*/
+  /* When signUpButton clicked, .login-container moves to the right */
+  .container.right-panel-active .login-container {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  /* Moves .overlay-container to the left */
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+
+  /* Show sign up form on the right (on top of login form)*/
+  .container.right-panel-active .signup-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+  }
+
+  /* Move .overlay-left slide to left */
+  .container.right-panel-active .overlay {
+    transform: translateX(-50%);
+  }
+
+  /* Make text slide in from left */
+  .container.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+
+  /* Move text slide in from right */
+  .container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  nav {
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
