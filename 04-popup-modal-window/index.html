@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta property="og:title" content="Popup Modal Window " />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://vanillajs-only.netlify.app/04-popup-modal-window"
+    />
+    <meta
+      property="og:image"
+      content="../00-assets/images/projects/markdown/04-popup-modal-window.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vanilla JavaScript Projects" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kimberlywanst" />
+    <meta name="twitter:creator" content="@kimberlywanst" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../00-assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../00-assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../00-assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Popup Modal Window</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home ➡️</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <h1>Modal Window</h1>
+        <button class="show-modal">Show Modal #1</button>
+        <button class="show-modal">Show Modal #2</button>
+        <button class="show-modal">Show Modal #3</button>
+      </div>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2>I'm a modal window! 😊</h2>
+        <p>
+          I recently discovered I could make fudge with just chocolate chips,
+          sweetened condensed milk, vanilla extract, and a thick pot on slow
+          heat.
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+
+    <footer>
+      <nav>
+        <ul class="about">
+          <li>
+            Made with <span role="img" aria-label="heart">❤️</span> by Kimberly
+            <span role="img" aria-label="sparkles">✨</span>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="https://twitter.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-twitter" aria-hidden="true"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-github" aria-hidden="true"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="assets/script.js"></script>
+</html>

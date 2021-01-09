@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --font: "Nunito", sans-serif;
+  --font-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set 1rem = 10px */
+  font-size: 62.5%;
+  font-family: var(--font);
+  background: url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--font-color);
+  line-height: 1.5;
+  padding: 0 1rem;
+  position: relative;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 1rem;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: #b93849;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/*
+=========
+ Main
+=========
+*/
+
+main {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 4.5rem 0;
+}
+
+main .show-modal {
+  font-family: var(--font);
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+main .show-modal:hover {
+  background: #b93849;
+  color: #fff;
+}
+
+main .close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/*
+=============================
+ Classes to make modal work
+=============================
+*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3rem 5 rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  /* modal unaffected by overlay */
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(3px);
+  z-index: 5;
+}
+
+/*
+=========
+ Nav bar
+=========
+*/
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  height: 3rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav li {
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+nav li a:hover {
+  opacity: 0.8;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav li a {
+  color: #fff;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav .about,
+footer nav .social {
+  display: flex;
+  padding-bottom: 0.8rem;
+}
+
+/*
+=========
+ Media
+=========
+*/
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 0 2rem;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: var(--font-color);
+    padding-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .modal {
+    width: 50%;
+    padding: 5rem;
+  }
+
+  main .close-modal {
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+  }
+}
