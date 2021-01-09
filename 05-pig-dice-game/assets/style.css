@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --font: "Nunito", sans-serif;
+  --font-color: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set 1rem = 10px */
+  font-size: 62.5%;
+  font-family: var(--font);
+  background: linear-gradient(
+    to top left,
+    #d187a4 0%,
+    #6c2a98 50%,
+    #2716bd 100%
+  );
+  color: var(--font-color);
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 1rem;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  padding-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--font-color-dark);
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+/*
+=========
+ Main
+=========
+*/
+
+main {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+section.about {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+section.about p {
+  text-align: start;
+  padding: 0.4rem;
+  line-height: 1.2;
+}
+
+section#player--0,
+section#player--1,
+section.game-options {
+  width: 80%;
+  max-width: 15rem;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+section .stats .current {
+  font-weight: bold;
+  color: #442885;
+  background: #cda7e7;
+
+  border-radius: 10px;
+}
+
+section .stats .current p,
+section .stats .total p {
+  display: inline-block;
+}
+
+section.game-options {
+  position: relative;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+section.game-options img.dice {
+  position: absolute;
+  left: 70%;
+  height: 4rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  transform: translateX(-70%);
+}
+
+section.game-options div {
+  position: absolute;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+section.game-options button {
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  transition: transform 80ms ease-in;
+}
+
+section.game-options button:hover {
+  cursor: pointer;
+}
+
+section.game-options button:active {
+  transform: scale(0.95);
+}
+
+section.game-options .btn-hold .hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+section.active--player {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+section.active--player h2 {
+  font-weight: 700;
+}
+
+section.active--player .stats .current {
+  opacity: 1;
+}
+
+section.winner {
+  background: #f2f2f2;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*
+=========
+ Nav bar
+=========
+*/
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  height: 3rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav li {
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+nav li a:hover {
+  opacity: 0.8;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer nav {
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav .about,
+footer nav .social {
+  display: flex;
+  padding-bottom: 0.8rem;
+}
+
+/*
+=========
+ Media
+=========
+*/
+
+@media screen and (min-width: 1150px) {
+  body {
+    padding: 0 2rem;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  section.about {
+    grid-column: 1/4;
+  }
+
+  section.about p {
+    text-align: center;
+  }
+
+  section#player--0,
+  section#player--1,
+  section.game-options {
+    width: 100%;
+  }
+
+  section#player--0,
+  section#player--1 {
+    max-width: 20rem;
+  }
+
+  section .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  section .stats .current {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  section .stats .current p,
+  section .stats .total p {
+    display: block;
+    font-weight: bold;
+  }
+
+  section .stats .score {
+    font-size: 3rem;
+  }
+
+  section.game-options {
+    height: 100%;
+    flex-direction: column;
+    background: transparent;
+    box-shadow: none;
+    margin: 0 auto;
+  }
+
+  section.game-options img.dice {
+    left: 50%;
+    bottom: 10%;
+    height: 5rem;
+  }
+
+  section.game-options div {
+    position: static;
+    height: 100%;
+    align-items: none;
+  }
+
+  section.game-options div button {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2.5rem;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+}
