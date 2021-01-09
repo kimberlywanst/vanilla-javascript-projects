@@ -149,7 +149,6 @@ header nav {
 
 header nav ul {
   display: flex;
-  /* justify-content: space-around; */
 }
 
 footer nav {
