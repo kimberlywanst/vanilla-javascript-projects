@@ -123,32 +123,50 @@ main .project-item .project-item-content {
 */
 
 nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
   height: 3rem;
-  display: grid;
   align-items: center;
-  display: flex;
-  justify-content: space-around;
-  padding: 0 2rem;
-}
-
-nav .nav-left,
-nav .nav-right {
-  display: flex;
+  padding: 1rem 0;
 }
 
 nav li {
+  color: var(--font-color);
   font-size: 1rem;
   font-weight: 700;
   margin-right: 1rem;
-  text-align: center;
 }
 
 nav li a:hover {
-  color: #ffe863;
+  opacity: 0.8;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul {
+  display: flex;
+  /* justify-content: space-around; */
 }
 
 footer nav {
-  padding-bottom: 2rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav .about,
+footer nav .social {
+  display: flex;
+  padding-bottom: 0.8rem;
+}
+
+footer nav .about,
+footer nav .social a {
+  color: #e9cf69;
 }
 
 @media screen and (max-width: 900px) {
