@@ -45,6 +45,7 @@ p {
 h1 {
   font-size: 3rem;
   letter-spacing: 0.05rem;
+  padding-bottom: 2rem;
 }
 
 h2 {
@@ -103,9 +104,10 @@ main {
 
 main .container {
   position: relative;
-  width: 77rem;
-  max-width: 100%;
-  min-height: 40rem;
+  height: 60rem;
+  max-height: 100%;
+  min-width: 20rem;
+
   background: #fff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem;
@@ -119,6 +121,11 @@ main .form-container {
   height: 100%;
   transition: all 0.6s ease-in-out;
   /* smooth transform translate X transitions */
+}
+
+main .login-container,
+main .signup-container {
+  height: 50%;
 }
 
 main .login-container {
@@ -184,6 +191,102 @@ main .overlay-container button.transparent {
   padding-bottom: 1.5rem;
 }
 
+/*  Display visible area (hide panel which is overflow/ out of boundary) */
+main .overlay-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+/* Hide and show panels */
+main .overlay-container .overlay {
+  position: relative;
+  width: 100%;
+  height: 200%;
+  /* take full height of overlay-container: 200% * 50% = 100% */
+  top: 0;
+
+  background: var(--login-overlay);
+  background: linear-gradient(to bottom, #f77f00, #d62828);
+  /* background: linear-gradient(to right, #d62828, #f77f00); */
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Holds actual content */
+main .overlay-container .overlay .overlay-panel {
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* hides content from view */
+.overlay-right {
+  transform: translateY(0);
+}
+
+.overlay-left {
+  transform: translateY(20%);
+  bottom: 0;
+  opacity: 0;
+}
+
+/*
+===================
+SLIDING ANIMATION
+===================
+*/
+/* When signUpButton clicked, .login-container moves to the bottom */
+.container.right-panel-active .login-container {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Moves .overlay-container to the top */
+.container.right-panel-active .overlay-container {
+  transform: translateY(100%);
+}
+
+/* Show sign up form on the bottom (on top of login form)*/
+.container.right-panel-active .signup-container {
+  transform: translateY(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Slide .overlay-left to top */
+.container.right-panel-active .overlay {
+  transform: translateY(-50%);
+}
+
+/* Text slide in from top */
+.container.right-panel-active .overlay-left {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Text slide in from bottom */
+.container.right-panel-active .overlay-right {
+  transform: translateY(20%);
+}
+
 /*
 =========
  Nav bar
@@ -233,14 +336,19 @@ footer nav .social {
 
 @media screen and (min-width: 1100px) {
   main .container {
-    width: 77rem;
+    width: 60rem;
     max-width: 100%;
-    min-height: 40rem;
+    height: 40rem;
   }
 
   main .login-container,
   main .signup-container {
+    height: 100%;
     width: 50%;
+  }
+
+  main .form-container form input {
+    width: 80%;
   }
 
   /* Display visible area by hiding panel which is overflow/ out of boundary */
@@ -322,6 +430,21 @@ footer nav .social {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
+    animation: show 0.6s;
+  }
+
+  @keyframes show {
+    0%,
+    49.99% {
+      opacity: 0;
+      z-index: 1;
+    }
+
+    50%,
+    100% {
+      opacity: 1;
+      z-index: 5;
+    }
   }
 
   /* Move .overlay-left slide to left */
