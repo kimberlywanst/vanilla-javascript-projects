@@ -8,7 +8,7 @@ A collection of projects that I've built using HTML, CSS and plain JavaScript.
 
 A website that displays a random background colour each time "Change colour" button is clicked.
 
-![Background Colour Picker](00-assets/images/projects/markdown/01-background-colour-picker.jpg)
+![Background Colour Picker](00-assets/images/projects/markdown/01-background-colour-picker.png)
 [👉🏻 View live demo](https://vanillajs-only.netlify.app/01-background-colour-picker)
 
 ## 2. [Number Guessing Game 🎲](/02-number-guessing-game/)
@@ -29,7 +29,7 @@ A double slider with both sign up and login form.
 
 A popup windows appears when a button is clicked. Clicking on "X", "esc" button or outside of modal will close the popup.
 
-![Popup Modal Window](00-assets/images/projects/markdown/04-popup-modal-window.jpg)
+![Popup Modal Window](00-assets/images/projects/markdown/04-popup-modal-window.png)
 [👉🏻 View live demo](https://vanillajs-only.netlify.app/04-popup-modal-window)
 
 ## 5. [Pig Dice Game](/05-pig-dice-game/)
