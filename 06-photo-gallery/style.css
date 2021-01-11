@@ -105,16 +105,11 @@ h1 {
   z-index: 2;
 }
 
-/* Display entire overlay (display none by default) */
+/* Popup modal (display none by default) */
 .overlay.open {
   display: grid;
   align-items: center;
   justify-items: center;
-
-  backdrop-filter: blur(1rem);
-  /* filter: blur(1rem);
-  -webkit-filter: blur(1rem);
-  -moz-filter: blur(1rem); */
 }
 
 /* Appears when an image is clicked */
