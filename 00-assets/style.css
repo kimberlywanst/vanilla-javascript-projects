@@ -72,15 +72,18 @@ main section {
 }
 
 main .project-list {
-  width: 90vw;
-  max-width: 117rem;
+  width: 80vw;
+  max-width: 120rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  /* grid-auto-rows: 30rem; */
+  grid-gap: 2rem;
 }
 
 main .project-item figure {
-  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: 20rem 1fr;
+  border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transition: all 0.3s linear;
 }
@@ -172,6 +175,10 @@ footer nav .social a {
   nav {
     justify-content: space-between;
     padding: 0 1rem;
+  }
+
+  main .project-list {
+    width: 90vw;
   }
 }
 
