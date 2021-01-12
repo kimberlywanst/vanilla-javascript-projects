@@ -42,5 +42,6 @@ Players take turns to roll a single die as many times as they wish, adding all r
 ## 6. [Photo Gallery](/06-photo-gallery/)
 
 Created using CSS grid, outlay appears when an image is clicked.
+
 ![Photo gallery](00-assets/images/projects/markdown/06-photo-gallery.png)
 👉🏻 [View live demo](https://vanillajs-only.netlify.app/06-photo-gallery)

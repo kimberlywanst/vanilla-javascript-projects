@@ -21,7 +21,7 @@ By clicking a `button` in one of the overlay panels, the click event triggers on
 
 ## Forms Animation
 
-Two containers `.form-container` each having `width: 50%` and `position: absolute`. Both containers are moved at the same time. When `.overlay-container` is on top, `z-index` value of one form will be higher than the other.
+Two containers `.form-container` each having `width: 50%` and `position: absolute`. Both containers are moved at the same time. When `.overlay-container` is on top, `z-index` value of one form will be higher than the other. `.right-panel-active` class used to move `.form-containers` around when the buttons are clicked.
 
 ## Overlay Animation
 
