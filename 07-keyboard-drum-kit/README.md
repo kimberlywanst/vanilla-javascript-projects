@@ -7,17 +7,14 @@ When a corresponding key is hit on the keyboard, two things will happen:
 1. The drum sound associated with that key will be played
 2. Short animation highlights which key was pressed
 
+![Keyboard drum kit](../00-assets/images/projects/markdown/07-keyboard-drum-kit.png)
+👉🏻 [View live demo](https://vanillajs-only.netlify.app/07-keyboard-drum-kit)
+
+---
+
 ## Logic
 
 A `.playing` class is added to a key to highlight it was pressed.
-
-```
-.playing {
-    transform: scale(1.1);
-    border-color:
-    box-shadow:
-}
-```
 
 A `div` with `.keys` class stores all the playable `.key`s. Each of these `.key`s are also `div`s themselves which contains the sound it will make and which key should be hit on the keyboard.
 
