@@ -41,7 +41,17 @@ Players take turns to roll a single die as many times as they wish, adding all r
 
 ## 6. [Photo Gallery](/06-photo-gallery/)
 
-Created using CSS grid, outlay appears when an image is clicked.
+30 photos of different sizes are generated using CSS grid. An outlay appears when an image is clicked.
 
 ![Photo gallery](00-assets/images/projects/markdown/06-photo-gallery.png)
 👉🏻 [View live demo](https://vanillajs-only.netlify.app/06-photo-gallery)
+
+## 7. [Keyboard Drum Kit](/07-keyboard-drum-kit/)
+
+When a corresponding key is hit on the keyboard, two things will happen:
+
+1. The drum sound associated with that key will be played
+2. Short animation highlights which key was pressed
+
+![Keyboard drum kit](00-assets/images/projects/markdown/07-keyboard-drum-kit.png)
+👉🏻 [View live demo](https://vanillajs-only.netlify.app/07-keyboard-drum-kit)
