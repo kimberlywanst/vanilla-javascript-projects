@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta property="og:title" content="Keyboard Drum Kit 🥁" />
+
+    <meta
+      property="og:description"
+      content="Play the drums using your keyboard!"
+    />
+    <meta
+      property="og:url"
+      content="https://vanillajs-only.netlify.app/07-keyboard-drum-kit"
+    />
+    <meta property="og:image" content="" />
+    <!-- TODO: absolute URL from GitHub img -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vanilla JavaScript Projects" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kimberlywanst" />
+    <meta name="twitter:creator" content="@kimberlywanst" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../00-assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../00-assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../00-assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Keyboard Drum Kit 🥁</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home ➡️</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Keyboard Drum Kit 🥁</h1>
+        <div>
+          <div data-key="KeyA" class="key">
+            <!-- Define keyboard input -->
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+          <div data-key="KeyS" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+          <div data-key="KeyD" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-key="KeyF" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+          <div data-key="KeyG" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
+          <div data-key="KeyH" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+          <div data-key="KeyJ" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+          <div data-key="KeyK" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+          <div data-key="KeyL" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <audio data-key="KeyA" src="assets/sounds/clap.wav"></audio>
+    <audio data-key="KeyS" src="assets/sounds/hihat.wav"></audio>
+    <audio data-key="KeyD" src="assets/sounds/kick.wav"></audio>
+    <audio data-key="KeyF" src="assets/sounds/openhat.wav"></audio>
+    <audio data-key="KeyG" src="assets/sounds/boom.wav"></audio>
+    <audio data-key="KeyH" src="assets/sounds/ride.wav"></audio>
+    <audio data-key="KeyJ" src="assets/sounds/snare.wav"></audio>
+    <audio data-key="KeyK" src="assets/sounds/tom.wav"></audio>
+    <audio data-key="KeyL" src="assets/sounds/tink.wav"></audio>
+
+    <footer>
+      <nav>
+        <ul class="about">
+          <li>
+            Made with <span role="img" aria-label="heart">❤️</span> by Kimberly
+            <span role="img" aria-label="sparkles">✨</span>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="https://twitter.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-twitter" aria-hidden="true"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-github" aria-hidden="true"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="assets/script.js"></script>
+</html>
