@@ -267,6 +267,20 @@ SLIDING ANIMATION
   animation: show 0.6s;
 }
 
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
 /* Moves .overlay-container to the top */
 .container.right-panel-active .overlay-container {
   transform: translateY(-100%);
@@ -366,6 +380,13 @@ footer nav .social {
   main .signup-container {
     height: 100%;
     width: 50%;
+    left: 0;
+    top: none;
+  }
+
+  main .form-container {
+    top: 0;
+    left: none;
   }
 
   main .form-container form .social-container {
@@ -404,11 +425,9 @@ footer nav .social {
     height: 100%;
     width: 200%;
     /* take full width of overlay-container: 200% * 50% = 100% */
-    /* left: 100%; */
 
     background: var(--login-overlay);
     background: linear-gradient(to right, #f77f00, #d62828);
-    /* background: linear-gradient(to right, #d62828, #f77f00); */
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -436,7 +455,6 @@ footer nav .social {
   /* Sign up overlay */
   /* hides content from view */
   .overlay-right {
-    /* right: 0; */
     transform: translateX(0);
   }
 
@@ -457,11 +475,6 @@ footer nav .social {
     opacity: 0;
   }
 
-  /* Moves .overlay-container to the left */
-  .container.right-panel-active .overlay-container {
-    transform: translateX(-100%);
-  }
-
   /* Show sign up form on the right (on top of login form)*/
   .container.right-panel-active .signup-container {
     transform: translateX(100%);
@@ -470,18 +483,9 @@ footer nav .social {
     animation: show 0.6s;
   }
 
-  @keyframes show {
-    0%,
-    49.99% {
-      opacity: 0;
-      z-index: 1;
-    }
-
-    50%,
-    100% {
-      opacity: 1;
-      z-index: 5;
-    }
+  /* Moves .overlay-container to the left */
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
   }
 
   /* Move .overlay-left slide to left */
