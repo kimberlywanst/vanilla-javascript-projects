@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta property="og:title" content="Minimal Banking App" />
+
+    <meta property="og:description" content="" />
+    <!-- TODO: -->
+    <meta property="og:url" content="https://vanillajs-only.netlify.app/" />
+    <!-- TODO: -->
+    <meta property="og:image" content="" />
+    <!-- TODO: absolute URL from GitHub img -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vanilla JavaScript Projects" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kimberlywanst" />
+    <meta name="twitter:creator" content="@kimberlywanst" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../00-assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../00-assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../00-assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Minimal Banking App</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home ➡️</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="login">
+        <h1>Minimal Banking App</h1>
+        <p class="welcome">Login to get started!</p>
+        <form class="login_form">
+          <input
+            class="login_input login_input-user"
+            type="text"
+            placeholder="username"
+            required
+          />
+          <input
+            class="login_input login_input-password"
+            type="password"
+            placeholder="password"
+            required
+          />
+          <button class="login_button">Login</button>
+        </form>
+      </section>
+
+      <section class="app">
+        <div class="balance">
+          <div>
+            <p class="balance_label">Current balance</p>
+            <p class="balance_date">
+              As of <span class="date">01/01/2021</span>
+            </p>
+          </div>
+          <p class="balance_value">$0.00</p>
+        </div>
+
+        <div class="summary">
+          <p class="summary_label">In</p>
+          <p class="summary_value summary_value-in">$0.00</p>
+          <p class="summary_label">Out</p>
+          <p class="summary_value summary_value-out">$0.00</p>
+          <p class="summary_label">Interest</p>
+          <p class="summary_value summary_value-interest">$0.00</p>
+          <button class="sort_button">&downarrow; SORT</button>
+        </div>
+
+        <div class="transactions">
+          <div class="transactions_row">
+            <div class="transactions_type transactions_type-deposit">
+              #2 deposit
+            </div>
+            <div class="transactions_date">2 days ago</div>
+            <div class="transactions_amount">$1000</div>
+          </div>
+          <div class="transactions_row">
+            <div class="transactions_type transactions_type-withdrawal">
+              #1 withdrawal
+            </div>
+            <div class="transactions_date">5 days ago</div>
+            <div class="transactions_amount">-$630</div>
+          </div>
+        </div>
+
+        <div class="services services-transfer">
+          <h2>Transfer money</h2>
+          <form class="form form-transfer">
+            <label for="service-transfer-receiver" class="form_label"
+              >Receiver</label
+            >
+            <input
+              type="text"
+              id="service-transfer-receiver"
+              class="form_input form_input-receiver"
+            />
+            <label for="service-transfer-amount" class="form_label"
+              >Amount</label
+            >
+            <input
+              type="number"
+              id="service-transfer-amount"
+              class="form_input form_input-amount"
+            />
+            <button class="form_button form_button-transfer">&rarr;</button>
+          </form>
+        </div>
+
+        <div class="services services-loan">
+          <h2>Request loan</h2>
+          <form class="form form-loan">
+            <label for="service-loan-amount" class="form_label">Amount</label>
+            <input
+              type="number"
+              id="service-loan-amount"
+              class="form_input form_input-loan-amount"
+            />
+            <button class="form_button form_button-loan">&rarr;</button>
+          </form>
+        </div>
+
+        <div class="services services-close">
+          <h2>Close account</h2>
+          <form class="form form-close">
+            <label for="service-close-user" class="form_label"
+              >Confirm username</label
+            >
+            <input
+              type="text"
+              id="service-close-user"
+              class="form_input form_input-user"
+            />
+            <label for="service-close-password" class="form_label"
+              >Confirm password</label
+            >
+            <input
+              type="password"
+              id="service-close-password"
+              class="form_input form_input-password"
+            />
+            <button class="form_button form_button-close">&rarr;</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <ul class="about">
+          <li>
+            Made with <span role="img" aria-label="heart">❤️</span> by Kimberly
+            <span role="img" aria-label="sparkles">✨</span>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="https://twitter.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-twitter" aria-hidden="true"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-github" aria-hidden="true"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="assets/script.js"></script>
+</html>
