@@ -53,17 +53,18 @@ p {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-bottom: 2rem;
 }
 
 p {
   font-size: 1.2rem;
+  text-align: start;
 }
 
 /*
@@ -125,28 +126,112 @@ main {
 }
 
 .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login img {
+  margin-bottom: 2rem;
+}
+
+.login .welcome {
+  margin: 1rem;
+}
+
+.login_form {
+  margin: 1rem;
+}
+
+.login_form .login_input {
+  width: 100%;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.678);
+  font-family: var(--font);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.login_form .login_button {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  background: #91eae4;
+  color: var(--font-color);
+  border: none;
+  border-radius: 1.5rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.login_form .login_button:hover {
+  background: #6ed4ce;
+}
+
+.login_form .login_button:focus {
+  outline: none;
+}
+
+.login_form .login_button:active {
+  scale: 1.2;
+}
+
+.sample_account {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.sample_account p {
+  padding: 0.5rem;
 }
 
 .app {
   display: grid;
-  grid-template-columns: auto-fit, minmax(min(3rem, 100%), 1fr);
-  grid-template-rows: auto-fill, minmax(min(8rem, 100%), 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows:  */
   gap: 1rem;
   transition: all 1s fade-in-out;
   opacity: 0;
+  margin: 2rem 0;
 }
 
 .app .balance,
 .app .summary,
 .app .transactions,
-.app .services {
+.app .services,
+.app .timer-section {
   grid-column: 1 / -1; /* take full width of screen */
 }
 
-.app .balance,
-.app .summary {
+.app .balance {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app .balance .balance_value {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.app .balance .balance_date {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
 }
 
 .summary .summary_value-in {
@@ -168,14 +253,61 @@ main {
   justify-content: space-between;
   padding: 1rem;
   margin: 0.5rem 0;
-  background: #f0efeb;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 0.5rem;
   font-size: 1rem;
 }
 
-/* .transactions .transactions_row .transactions_type-deposit {
-  color: #10920b;
-} */
+.services {
+  margin: 1rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.services-transfer {
+  /* background: linear-gradient(to right, #7dd375, #2cb628, #065204); */
+  background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+}
+
+.services-close {
+  /* background: linear-gradient(to right, #ec6651b9, #c52510, #6d0f03); */
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+}
+
+.services .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .form_label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.services input {
+  width: 70%;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.678);
+  font-family: var(--font);
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.services .form_button {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.8rem;
+}
 
 /*
 =========
@@ -193,12 +325,34 @@ main {
   }
 
   main {
-    padding: 4.5rem 0;
+    padding: 4.5rem 0 2rem;
   }
 
-  .app {
-    grid-template-columns: repeat(auto-fit, minmax(min(5rem, 100%), 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(min(8rem, 100%), 1fr));
+  .app .balance,
+  .app .summary {
+    grid-column: 1 / span 5;
+  }
+
+  .app .summary {
+    margin: 2rem 0;
+  }
+
+  .app .transactions {
+    min-width: 20rem;
+    margin-right: 2rem;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 5;
+  }
+
+  .app .services {
+    grid-column: 3 / span 5;
+    max-width: 20rem;
+  }
+
+  .app .timer-section p {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 
   h1 {
@@ -207,7 +361,7 @@ main {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     padding-bottom: 2rem;
   }
 

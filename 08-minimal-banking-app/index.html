@@ -62,44 +62,54 @@
 
     <main>
       <section class="login">
+        <img src="assets/logo.png" alt="logo" />
         <h1>Minimal Banking App</h1>
         <p class="welcome">Login to get started!</p>
-        <form class="login_form">
-          <input
-            class="login_input login_input-user"
-            type="text"
-            placeholder="username"
-            required
-          />
-          <input
-            class="login_input login_input-password"
-            type="password"
-            placeholder="password"
-            required
-          />
-          <button class="login_button">Login</button>
-        </form>
+        <div class="login_form">
+          <form>
+            <input
+              class="login_input login_input-user"
+              type="text"
+              placeholder="Username"
+              required
+            />
+            <input
+              class="login_input login_input-password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <button class="login_button">Login</button>
+
+            <div class="sample_account">
+              <h2>Sample account</h2>
+              <p>Username: jd</p>
+              <p>Password: 1234</p>
+            </div>
+          </form>
+        </div>
       </section>
 
       <section class="app">
         <div class="balance">
-          <div>
-            <p class="balance_label">Current balance</p>
-            <p class="balance_date">
-              As of <span class="date">01/01/2021</span>
-            </p>
-          </div>
           <p class="balance_value">$0.00</p>
+          <p class="balance_label">Current balance</p>
+          <p class="balance_date">As of <span class="date">01/01/2021</span></p>
         </div>
 
         <div class="summary">
-          <p class="summary_label">In</p>
-          <p class="summary_value summary_value-in">$0.00</p>
-          <p class="summary_label">Out</p>
-          <p class="summary_value summary_value-out">$0.00</p>
-          <p class="summary_label">Interest</p>
-          <p class="summary_value summary_value-interest">$0.00</p>
-          <button class="sort_button">&downarrow; SORT</button>
+          <div class="summary-item">
+            <p class="summary_label">In</p>
+            <p class="summary_value summary_value-in">$0.00</p>
+          </div>
+          <div class="summary-item">
+            <p class="summary_label">Out</p>
+            <p class="summary_value summary_value-out">$0.00</p>
+          </div>
+          <div class="summary-item">
+            <p class="summary_label">Interest</p>
+            <p class="summary_value summary_value-interest">$0.00</p>
+          </div>
         </div>
 
         <div class="transactions">
@@ -142,19 +152,6 @@
           </form>
         </div>
 
-        <div class="services services-loan">
-          <h2>Request loan</h2>
-          <form class="form form-loan">
-            <label for="service-loan-amount" class="form_label">Amount</label>
-            <input
-              type="number"
-              id="service-loan-amount"
-              class="form_input form_input-loan-amount"
-            />
-            <button class="form_button form_button-loan">&rarr;</button>
-          </form>
-        </div>
-
         <div class="services services-close">
           <h2>Close account</h2>
           <form class="form form-close">
@@ -176,6 +173,10 @@
             />
             <button class="form_button form_button-close">&rarr;</button>
           </form>
+        </div>
+
+        <div class="timer-section">
+          <p>You will be logged out in <span class="timer">10:00</span></p>
         </div>
       </section>
     </main>
