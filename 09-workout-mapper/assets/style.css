@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+:root {
+  --font: "Ubuntu", sans-serif;
+  --font-color: #afffcb;
+  --background-color: #264653;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set 1rem = 10px */
+  font-size: 62.5%;
+  font-family: var(--font);
+  background: var(--background-color);
+  color: var(--font-color);
+  line-height: 1.5;
+  padding: 0 1rem;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 1rem;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/*
+=========
+ Main
+=========
+*/
+
+main {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 4.5rem 0;
+}
+
+/*
+=========
+ Nav bar
+=========
+*/
+
+nav {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  height: 3rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav li {
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+nav li a:hover {
+  opacity: 0.8;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer nav {
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer nav .about,
+footer nav .social {
+  display: flex;
+  padding-bottom: 0.8rem;
+}
+
+/*
+=========
+ Media
+=========
+*/
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 0 2rem;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}

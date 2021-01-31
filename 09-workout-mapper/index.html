@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta property="og:title" content="" />
+    <!-- TODO: -->
+    <meta property="og:description" content="" />
+    <!-- TODO: -->
+    <meta property="og:url" content="https://vanillajs-only.netlify.app/" />
+    <!-- TODO: -->
+    <meta property="og:image" content="" />
+    <!-- TODO: absolute URL from GitHub img -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vanilla JavaScript Projects" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kimberlywanst" />
+    <meta name="twitter:creator" content="@kimberlywanst" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../00-assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../00-assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../00-assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <title>Workout Mapper</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home ➡️</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="sidebar">
+        <div class="logo">
+          <img src="" alt="" />
+          <h1>Workout Mapper</h1>
+        </div>
+
+        <ul class="workouts">
+          <form class="form hidden">
+            <div class="form-row">
+              <label for="type" class="form-label">Type</label>
+              <select name="type" id="type" class="form-input form-input_type">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label class="form-label">Distance</label>
+              <input class="form-input form-input_distance" placeholder="km" />
+            </div>
+            <div class="form-row">
+              <label class="form-label">Duration</label>
+              <input class="form-input form-input_duration" placeholder="min" />
+            </div>
+            <div class="form-row">
+              <label class="form-label">Cadence</label>
+              <input
+                class="form-input form-input_cadence"
+                placeholder="step/min"
+              />
+            </div>
+            <div class="form-row form-row_hidden">
+              <label class="form-label">Elevation</label>
+              <input
+                class="form-input form-input_elevation"
+                placeholder="meters"
+              />
+            </div>
+            <button class="form-button">OK</button>
+          </form>
+        </ul>
+      </section>
+
+      <section id="map"></section>
+    </main>
+
+    <footer>
+      <nav>
+        <ul class="about">
+          <li>
+            Made with <span role="img" aria-label="heart">❤️</span> by Kimberly
+            <span role="img" aria-label="sparkles">✨</span>
+          </li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="https://twitter.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-twitter" aria-hidden="true"></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/kimberlywanst" target="_blank"
+              ><span class="fab fa-github" aria-hidden="true"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="assets/script.js"></script>
+</html>
