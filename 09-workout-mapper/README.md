@@ -26,7 +26,7 @@
 
 <br>
 
-- View all workouts on a map
+- View all workouts on a map using [Leaflet library](https://leafletjs.com/)
 
   ✔️ Display all workouts on a map
 
