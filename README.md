@@ -2,6 +2,7 @@
 
 A collection of projects that I've built using HTML, CSS and plain JavaScript.
 
+![JavaScript projects showcase](00-assets/images/projects/markdown/showcase.jpg)
 [👉🏻 View all live demos](https://vanillajs-only.netlify.app/)
 
 <br>
