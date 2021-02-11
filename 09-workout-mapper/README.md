@@ -1,5 +1,10 @@
 # Workout Mapper 📍
 
+Log workouts based on current location using [Leaflet library](https://leafletjs.com/) and OpenStreetMap. Existing workouts are saved using local storage.
+
+![Workout Mapper](../00-assets/images/projects/markdown/09-workout-mapper.jpg)
+👉🏻 [View live demo](https://vanillajs-only.netlify.app/09-workout-mapper)
+
 ## User Stories
 
 <br>

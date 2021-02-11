@@ -76,3 +76,12 @@ When a corresponding key is hit on the keyboard, two things will happen:
 
 ![Minimal banking app](00-assets/images/projects/markdown/08-minimal-banking-app.png)
 👉🏻 [View live demo](https://vanillajs-only.netlify.app/08-minimal-banking-app)
+
+<br>
+
+## 9. [Workout Mapper 📍](/09-workout-mapper)
+
+Log workouts based on current location using [Leaflet library](https://leafletjs.com/) and OpenStreetMap. Existing workouts are saved using local storage.
+
+![Workout Mapper](00-assets/images/projects/markdown/09-workout-mapper.jpg)
+👉🏻 [View live demo](https://vanillajs-only.netlify.app/09-workout-mapper)
