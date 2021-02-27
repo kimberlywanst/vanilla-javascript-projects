@@ -7,7 +7,7 @@ When a corresponding key is hit on the keyboard, two things will happen:
 1. The drum sound associated with that key will be played
 2. Short animation highlights which key was pressed
 
-![Keyboard drum kit](../00-assets/images/projects/markdown/07-keyboard-drum-kit.png)
+![Keyboard drum kit](../00-assets/images/projects/markdown/07-keyboard-drum-kit.jpg)
 👉🏻 [View live demo](https://vanillajs-only.netlify.app/07-keyboard-drum-kit)
 
 ---

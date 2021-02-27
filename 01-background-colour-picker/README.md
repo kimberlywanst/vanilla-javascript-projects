@@ -1,6 +1,6 @@
 # Background Colour Picker 🎨
 
-![Background colour picker](../00-assets/images/projects/markdown/01-background-colour-picker.png)
+![Background colour picker](../00-assets/images/projects/markdown/01-background-colour-picker.jpg)
 
 [👉🏻 View live demo](https://vanillajs-only.netlify.app/01-background-colour-picker)
 
