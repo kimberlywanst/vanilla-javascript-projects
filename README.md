@@ -1,11 +1,12 @@
 # Vanilla JavaScript Projects
 
 Showcasing projects that I've built from scratch using HTML, CSS and plain JavaScript.
-
+<br>
+[👉🏻 View all live demos](https://vanillajs-only.netlify.app/)
 <br>
 
 ![JavaScript projects showcase](00-assets/images/projects/markdown/showcase.jpg)
-[👉🏻 View all live demos](https://vanillajs-only.netlify.app/)
+
 
 <br>
 
